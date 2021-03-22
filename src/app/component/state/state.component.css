@@ -1,0 +1,133 @@
+/*--------service banner-------*/
+.services_sec {
+	padding: 50px 0px;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center !important;
+	position: relative;
+}
+.services_overlay{
+	top: 0px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #666666;
+	background-color: #666666de;
+}
+@media (min-width: 768px){
+	.services_sec {
+	min-height: 350px;
+	margin-top: 80px;
+	}
+}
+@media (max-width: 768px){
+	.services_sec {
+    margin-top: 70px;
+    height: auto !important;
+    padding: 25px 0px;
+	}
+}
+button.input-group-text.call_btn {
+    background-color: #f7941e;
+    border: 1px solid #b7b5b3;
+    color: #ffffff;
+    cursor: pointer;
+}
+button.btn.btn-secondary.btn_bdr.btn-lg.btn-block {
+    border: 1px solid #eee;
+    background-color: #666666;
+}
+.text_org {
+    color: #f7941e;
+}
+.text_gray {
+    color: #666666;
+}
+.bg_color1{
+	background-color: #f7941e;
+}
+.bg_color2{
+	background-color: #666666;
+}
+.border_org{
+	border: 1px solid #f7941e;
+}
+/*--------//service banner-------*/
+
+
+
+
+/*--------service wrap-------*/
+.state_wrap {
+    background-color: #ffffff;
+    padding: 60px 0px;
+}
+ul.state_list {
+    list-style: none;
+    padding-left: 0px;
+}
+ul.state_list li {
+    border: 1px solid #ffffff;
+    background-color: #f6f6f6;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px #0000000f;
+}
+p.state_content {
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+img.mr-3.state_img {
+    width: 100px;
+    height: 70px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px #00000054;
+}
+.heading-h2 {
+    color: #666666;
+    font-weight: 600;
+    border-bottom: 3px solid #f7941e;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+/*--------//service wrap-------*/
+
+/*---------testimonial---------*/
+.testimonial_sec {
+    background-color: #f1f1f1;
+    padding: 60px 0px;
+}
+.testimonial_box {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    width: 100%;
+    position: relative;
+    box-shadow: 1px 1px 5px #00000012;
+    margin: 15px 0px;
+    min-height: 400px;
+}
+.testimonial_footer {
+    border-top: 2px solid #f1f1f1;
+    padding: 10px 15px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+.quote_l {
+    color: #f7941e;
+    position: absolute;
+    top: -17px;
+    font-size: 40px;
+}
+.bolg_sec {
+    padding: 60px 0px;
+    background-color: #ffffff;
+}
+/*--------//testimonial--------*/
+
+h6.mt-0.mb-1 {
+    font-size: 16px;
+}

@@ -1,0 +1,39 @@
+<app-header></app-header>
+<!--=============banner========-->
+<section class="services_list" style="background: url(assets/images/service-list.jpg);">
+  <div class="services_overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12">
+        <h1 class="services-title text-white animated bounceInLeft delay-1s"><b>Services List</b></h1>
+        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna.</p>
+      </div>
+    </div>
+    <!--/row-->
+  </div>
+  <!--/container-->
+</section><!-- banner_section -->
+
+<section class="list-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-12" *ngFor='let service of services;let l = index'>
+        <a routerLink="{{'/' + service.permalink}}">
+          <div class="services-list">
+            <div class="service-list-icon">
+              <img class="card-img-top" src="{{imageUrl + this.service.permalink + '/' + this.service.image}}"
+                alt="Card image" style="width:100%" />
+            </div>
+            <div class="service-list-name">{{service.name}}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--/row-->
+  </div>
+</section>
+
+<app-footer></app-footer>

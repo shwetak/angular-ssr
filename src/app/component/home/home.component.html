@@ -1,0 +1,515 @@
+<app-header></app-header>
+<app-search></app-search>
+<!--=============banner========-->
+<section class="banner_section" style="background: url(assets/images/banner.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 text-center">
+        <h1 class="home-title text-white animated zoomIn"><b><span class="find-text">Find</span> Trusted Local Pros For
+            Any Home Project.</b></h1>
+      </div>
+    </div>
+    <!--/row-->
+
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2">
+        <div class="form-body animated bounceInDown">
+          <div class="alert alert-danger alert-dismissible" *ngIf="errShow">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{errMsg}}
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+              <div class="form-group">
+                <!-- <select id="inputState" class="bg-light form-control form-control-lg custom_form"
+                  (change)="serviceChange($event)">
+                  <option selected>Select Services</option>
+                  <option *ngFor='let service of services;let l = index' (selected)="(currentService.id=service.id)"
+                    value="{{l}}">{{service.name}}</option>
+                </select> -->
+
+                <select id="inputState" class="bg-light form-control form-control-lg custom_form">
+                  <option selected>Select Services</option>
+                  <option value="1">Adoption Assistance</option>
+                  <option value="2">Car Accident Attorney</option>
+                  <option value="3">Chiropractors </option>
+                  <option value="4">Computer Servicing</option>
+                  <option value="5">Debt Settlement</option>
+                  <option value="6">Electrician</option>
+                  <option value="7">Fire Restoration</option>
+                  <option value="8">Hearing Aids</option>
+                  <option value="9">Kitchen Remodelling</option>
+                  <option value="10">Mold Removal</option>
+                  <option value="11">Painters</option>
+                  <option value="12">Rehab</option>
+                  <option value="13">Student Loan Consolidation</option>
+                  <option value="14"> Appliance Repair </option>
+                  <option value="15">Carpet Cleaning</option>
+                  <option value="16">Cleaners</option>
+                  <option value="17">Contractors</option>
+                  <option value="18"> DishTV</option>
+                  <option value="19">Exterminators </option>
+                  <option value="20">Handyman</option>
+                  <option value="21">HVAC</option>
+                  <option value="22">Locksmith</option>
+                  <option value="23">Movers</option>
+                  <option value="24">Plumbers</option>
+                  <option value="25">Roofers </option>
+                  <option value="26">Water Damage Restoration </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <div class="form-group">
+                <!-- <select id="inputState" class="bg-light form-control form-control-lg custom_form"
+                  (change)="serviceStateChange($event)">
+                  <option selected>Select State</option>
+                  <option *ngFor='let state of states;let m = index' (selected)="(currentServiceState.id=state.id)"
+                    value="{{m}}">{{state.name}}</option>
+                </select> -->
+
+
+
+                <select id="inputState" class="bg-light form-control form-control-lg custom_form">
+                  <option selected>Select State</option>
+                  <option value="alaska">Alaska</option>
+                  <option value="alabama">Alabama</option>
+                  <option value="arizona">Arizona</option>
+                  <option value="arkansas">Arkansas</option>
+                  <option value="california">California</option>
+                  <option value="colorado">Colorado</option>
+                  <option value="connecticut">Connecticut</option>
+                  <option value="delaware">Delaware</option>
+                  <option value="florida">Florida</option>
+                  <option value="georgia">Georgia</option>
+                  <option value="hawaii">Hawaii</option>
+                  <option value="idaho">Idaho</option>
+                  <option value="illinois">Illinois</option>
+                  <option value="Indiana">Indiana</option>
+                  <option value="Iowa">Iowa</option>
+                  <option value="kansas">Kansas</option>
+                  <option value="kentucky">Kentucky</option>
+                  <option value="louisiana">Louisiana</option>
+                  <option value="maine">Maine</option>
+                  <option value="maryland">Maryland</option>
+                  <option value="massachusetts">Massachusetts</option>
+                  <option value="michigan">Michigan</option>
+                  <option value="minnesota">Minnesota</option>
+                  <option value="mississippi">Mississippi</option>
+                  <option value="missouri">Missouri</option>
+                  <option value="montana">Montana</option>
+                  <option value="nebraska">Nebraska</option>
+                  <option value="nevada">Nevada</option>
+                  <option value="new hampshire">New Hampshire</option>
+                  <option value="new jerseyArizona">New JerseyArizona</option>
+                  <option value="new mexico">New Mexico</option>
+                  <option value="new york">New York</option>
+                  <option value="new jerseyArizona">New JerseyArizona</option>
+                  <option value="north carolina">North Carolina</option>
+                  <option value="north dakota">North Dakota</option>
+                  <option value="Oklahoma">Oklahoma</option>
+                  <option value="oregon">Oregon</option>
+                  <option value="pennsylvania">Pennsylvania</option>
+                  <option value="rhode island">Rhode Island</option>
+                  <option value="south carolina">South Carolina</option>
+                  <option value="south dakota ">South Dakota </option>
+                  <option value="tennessee">Tennessee</option>
+                  <option value="texas">Texas</option>
+                  <option value="utah"> Utah</option>
+                  <option value="vermont"> Vermont</option>
+                  <option value="virginia"> Virginia</option>
+                  <option value="washington"> Washington</option>
+                  <option value="west virginia"> West Virginia</option>
+                  <option value="wisconsin"> Wisconsin</option>
+                  <option value="wyoming"> Wyoming</option>
+                </select>
+
+              </div>
+            </div>
+            <!--             
+            <div class="col-12 col-md-6 mb-3">
+              <div class="form-group">
+                <select id="inputState" class="bg-light form-control form-control-lg custom_form" (change)="serviceChange($event)">
+                  <option selected>Select Services</option>
+                  <option *ngFor='let service of services;let l = index' (selected)="(currentService.id=service.id)" value="{{l}}">{{service.name}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <div class="form-group">
+                <select id="inputState" class="bg-light form-control form-control-lg custom_form" (change)="serviceStateChange($event)">
+                  <option selected>Select State</option>
+                  <option *ngFor='let state of states;let m = index' (selected)="(currentServiceState.id=state.id)" value="{{m}}">{{state.name}}</option>
+                </select>
+              </div>
+            </div> -->
+            <div class="col-12 col-md-12">
+              <!-- <div class="form-group">
+                <select id="inputState" class="bg-light form-control form-control-lg custom_form">
+                  <option selected>Select city</option>
+                  <option>Text Here</option>
+                  <option>Text Here</option>
+                  <option>Text Here</option>
+                </select>
+              </div> -->
+              <div class="form-group text-center">
+                <button class="Find-btn" (click)="search()">Find</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+  </div>
+  <!--/container-->
+  <img src="assets/images/curve.svg" alt="services" class="curves">
+</section><!-- banner_section -->
+
+
+
+<section class="section_1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="heading-h2"></h2>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="services_box_1 animated bounceInLeft delay-1s">
+          <h4 class="bg_gray">Transparent Bills</h4>
+          <div class="content_body_box">
+            Quality can never compromise with price. ServiceNearMe helps you in getting your things done within no time
+            and at reasonable prices.
+          </div>
+          <i class="fa fa-caret-down carets"></i>
+        </div>
+        <div class="services_icons_1 mb-3 text-center">
+          <img src="assets/images/icons/transparent-bills.svg" alt="services near me" class="animated rollIn delay-1s">
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="services_box_1 animated bounceInLeft delay-2s">
+          <h4 class="bg_org">Cleaning with Care</h4>
+          <div class="content_body_box">
+            We have a panel of trusted experts who have years of experience in their respective fields. You can trust
+            our well-trained professionals with your eyes shut.
+          </div>
+          <i class="fa fa-caret-down carets"></i>
+        </div>
+        <div class="services_icons_1 mb-3 text-center">
+          <img src="assets/images/icons/cleaning-with-care.svg" alt="services near me" class="animated rollIn delay-2s">
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="services_box_1 animated bounceInLeft delay-3s">
+          <h4 class="bg_gray">Trustworthy Services</h4>
+          <div class="content_body_box">
+            Get a total peace of mind with us. ServiceNearMe strives to ensure excellent services for all our customers.
+            Consider it as a value that we have rooted in all our experts.
+          </div>
+          <i class="fa fa-caret-down carets"></i>
+        </div>
+        <div class="services_icons_1 mb-3 text-center">
+          <img src="assets/images/icons/trustworthy-services.svg" alt="services near me"
+            class="animated rollIn delay-3s">
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="services_box_1 animated bounceInLeft delay-4s">
+          <h4 class="bg_org">One Call Services</h4>
+          <div class="content_body_box">
+            Get fabulous services at a single call. Save your money at one instance. Our experts are 24/7 round the
+            clock available to assist you. Reach to us at any point of time for all of queries and help.
+          </div>
+          <i class="fa fa-caret-down carets"></i>
+        </div>
+        <div class="services_icons_1 mb-3 text-center">
+          <img src="assets/images/icons/one-call-service.svg" alt="services near me" class="animated rollIn delay-4s">
+        </div>
+      </div>
+
+    </div>
+    <!--/row-->
+  </div>
+</section>
+<!--/section_1-->
+
+
+
+<section class="section_2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="heading-h3">We Are Providing All Solutions For Your Day To Day Needs</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="media c_media_h">
+          <img src="assets/images/icons/fire-restoration.svg" class="mr-3 icons_size hvr-bounce-in"
+            alt="Service near me">
+          <div class="media-body">
+            <h5 class="mt-0"><b> Fire Restoration </b></h5>
+            <p>Fires are one of the most traumatic events a family can experience; so it is important to know about the
+              mandatory changes.</p>
+            <a href="#" class="read_more">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="media c_media_h">
+          <img src="assets/images/icons/car-accident-attorney.svg" class="mr-3 icons_size hvr-bounce-in"
+            alt="Service near me">
+          <div class="media-body">
+            <h5 class="mt-0"><b> Car Accident Attorney </b></h5>
+            <p>Car Accidents may end up as a life changing experience with damages, accident or the other small or major
+              injuries that matters.</p>
+            <a href="#" class="read_more">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="media c_media_h">
+          <img src="assets/images/icons/carpet-cleaning.svg" class="mr-3 icons_size hvr-bounce-in"
+            alt="Service near me">
+          <div class="media-body">
+            <h5 class="mt-0"><b> Carpet Cleaning </b></h5>
+            <p>Having spotless floors may not seem like a big problem. It is efficient and essential to look for carpet
+              cleaning services.</p>
+            <a href="#" class="read_more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="media c_media_h">
+          <img src="assets/images/icons/student-loan-consolidation.svg" class="mr-3 icons_size hvr-bounce-in"
+            alt="Service near me">
+          <div class="media-body">
+            <h5 class="mt-0"><b>Chiropractors</b></h5>
+            <p>The major motive of the treatment of Chiropractor is to improve the spinal motion and improve body’s
+              physical function.</p>
+            <a href="#" class="read_more">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="media c_media_h">
+          <img src="assets/images/icons/dish-tv.svg" class="mr-3 icons_size hvr-bounce-in" alt="Service near me">
+          <div class="media-body">
+            <h5 class="mt-0"><b> Hearing Aids </b></h5>
+            <p>Hearing Aids are the miniature electronic device that is worn inside or behind your ear for sound
+              correction reaches your ears.</p>
+            <a href="#" class="read_more">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="media c_media_h">
+          <img src="assets/images/icons/debt-settlement.svg" class="mr-3 icons_size hvr-bounce-in"
+            alt="Service near me">
+          <div class="media-body">
+            <h5 class="mt-0"><b> Debt Settlement </b></h5>
+            <p>Debt Settlement has acquired the status of a necessity for some of our customers. This is necessitated by
+              needs of time.</p>
+            <a href="#" class="read_more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-3 text-center"><a routerLink="/services" class="see_more">See More</a></div>
+    </div>
+    <!--/row-->
+  </div>
+</section>
+<!--/section_2-->
+
+
+
+
+<section class="section_3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="heading-h2">Popular Services</h2>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="media">
+          <img src="assets/images/icons/plumbers.svg" class="hvr-float popular_ser_icons align-self-center mr-3"
+            alt="Plumber">
+          <div class="media-body">
+            <h3 class="mt-0"><b>Plumber</b></h3>
+            <p><b>A leaking valve is quite bothersome which can be easily fixed by DIY skills and is considered a very
+                minor issue. But when it comes to plumbing for home, you can never take things too lightly. <a
+                  href="#">Read More</a></b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 offset-md-6 col-12">
+        <div class="media">
+          <div class="media-body">
+            <h3 class="mt-0 text-right"><b>Lock Smith</b></h3>
+            <p class="text-right"><b>Many of the people believe that losing keys means having to get new locks. What
+                they don’t know is, they don’t need new locks as they can rekey the old one instead. By this you can
+                save your valuable time and money. <a href="#">Read More</a></b></p>
+          </div>
+          <img src="assets/images/icons/lock-smith.svg" class="hvr-float popular_ser_icons ml-3 mt-2" alt="Lock Smith">
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="media">
+          <img src="assets/images/icons/water-damage-restoration.svg"
+            class=" hvr-float popular_ser_icons align-self-center mr-3" alt="Water Damage Restoration">
+          <div class="media-body">
+            <h3 class="mt-0"><b>Water Damage Restoration</b></h3>
+            <p><b>Slight flow of water might seem harmless; but this innocent-looking substance can do serious
+                destruction to any home and office building in no time. When you are dealing with water damage, direct
+                and quick action is crucial with Water Restoration. <a href="#">Read More</a></b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+  </div>
+  <img src="assets/images/popular-services.jpg" class="bg_services" alt="services">
+</section>
+<!--/section_3-->
+
+
+
+<section class="section_4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="heading-h2">Why Choose Us?</h2>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="why-choose-box">
+          <img src="assets/images/line-d.svg" alt="why Choose" class="d_line">
+          <div class="row">
+            <div class="col-md-10 mb-5 pt-5 offset-md-2 col-12">
+              <div class="media">
+                <img src="assets/images/icons/cleaning-with-care2.svg"
+                  class="align-self-center mr-3 why_choose_icon hvr-bounce-in" alt="Plumber">
+                <div class="media-body">
+                  <h4 class="mt-0 text_org"><b>Same Day Service</b></h4>
+                  <p class="text-justify"> ServiceNearMe Company offers same-day appointments with our effective on-call
+                    repair services. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10 mb-5 pt-4 col-12">
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="mt-0 text-right text_org"><b>No Hidden Fees</b></h4>
+                  <p class="text-justify">You will be provided with an honest written assessment and quote so that you
+                    will have a clear empathy of what needs to be done and what the cost will be.</p>
+                </div>
+                <img src="assets/images/icons/transparent-bills2.svg" class="ml-3 mt-2 why_choose_icon hvr-bounce-in"
+                  alt="Lock Smith">
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12">
+        <div class="why-choose-box">
+          <img src="assets/images/line-d.svg" alt="why Choose" class="d_line">
+          <div class="row">
+            <div class="col-md-10 mb-5 pt-5 offset-md-2 col-12">
+              <div class="media">
+                <img src="assets/images/icons/trustworthy-services2.svg"
+                  class="align-self-center mr-3 why_choose_icon hvr-bounce-in" alt="Plumber">
+                <div class="media-body">
+                  <h4 class="mt-0 text_org"><b>We Work on All Major Brands</b></h4>
+                  <p class="text-justify">Our highly trained experts have extensive experience in this field, which
+                    means we are acquainted with all the home services.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10 mb-5 pt-4 col-12">
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="mt-0 text-right text_org"><b>24*7 Emergency Service</b></h4>
+                  <p class="text-justify">We know crisis can come any time and at any moment. ServiceNearMe deliver 24/7
+                    emergency services so that we can be available whenever you need us.</p>
+                </div>
+                <img src="assets/images/icons/one-call-service2.svg" class="ml-3 mt-2 why_choose_icon hvr-bounce-in"
+                  alt="Lock Smith">
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+        </div>
+      </div>
+    </div>
+    <!--/row-->
+  </div>
+</section>
+<!--/section_4-->
+
+<section class="section_5">
+  <div class="container">
+    <div class="step_wrap">
+      <div class="line_s"></div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="heading-step mb-3">Steps To Ease Life</h2>
+          <p class="text-center mb-5"></p>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="step_icons hvr-bounce-out">1</div>
+          <div class="step_box">
+            <i class="fa fa-caret-up carets_up"></i><b>Browse Services</b>
+            <p>Servicenearme is a one stop for all those who are looking for home services. Here, we cover more than 30+
+              services for all your home related needs. Go through the list, and select what you want. </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="step_icons hvr-bounce-out">2</div>
+          <div class="step_box">
+            <i class="fa fa-caret-up carets_up"></i><b>Schedule Services</b>
+            <p>Schedule a service as per your needs and requirements through our customer care. Get it done in an
+              instant without any hassle. Our experts will be more than happy to help and assist you.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="step_icons hvr-bounce-out">3</div>
+          <div class="step_box">
+            <i class="fa fa-caret-up carets_up"></i><b>Book Service</b>
+            <p>After going through the process, you will be asked to mention your requirements such as when and at what
+              time etc. and you will be done with an instant.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="step_icons hvr-bounce-out">4</div>
+          <div class="step_box">
+            <i class="fa fa-caret-up carets_up"></i><b>Service Delivery</b>
+            <p>After the completion of steps, you will receive a confirmation mail with the details of your booking. Get
+              ready to experience a professional touch. </p>
+          </div>
+        </div>
+      </div>
+      <!--/row-->
+      <!-- <div class="row">
+        <div class="col-md-12 text-center">
+          <ol>
+            <li><strong>Browse Services-</strong> Servicenearme is a one stop for all those who are looking for home services. Here, we cover more than 30+ services for all your home related needs. Go through the list, and select what you want. </li>
+            <li><strong>Schedule Services-</strong> Schedule a service as per your needs and requirements through our customer care.  Get it done in an instant without any hassle.</li>
+            <li><strong>Book Service-</strong> After going through the process, you will be asked to mention your requirements such as when and at what time etc. and you will be done with an instant.</li>
+            <li><strong>Service Delivery-</strong> After the completion of steps, you will receive a confirmation mail with the details of your booking. Get ready to experience a professional touch.</li>
+          </ol>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!--/section_5-->
+<app-footer></app-footer>

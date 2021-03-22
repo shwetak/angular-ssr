@@ -1,0 +1,24 @@
+<!--===============Header==============-->
+<header id="header">
+  <div class="container">
+    <div id="logo" class="pull-left">
+      <a routerLink="/"><img src="assets/images/logo.svg" alt="" class="website_logo"></a>
+    </div>
+    <nav id="nav-menu-container">
+      <ul class="nav-menu m-boder">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/privacy">Privacy Policy</a></li>
+        <li class="menu-has-children"><a>Services</a>
+          <ul class="bdr-none">
+            <li *ngFor='let service of services;let l = index'>
+              <a routerLink="{{'/' + service.permalink}}">{{service.name}}</a>
+            </li>
+
+          </ul>
+        </li>
+        <li><a routerLink="/blog">Blog</a></li>
+        <li><a routerLink="/contact-us">Contact Us</a></li>
+      </ul>
+    </nav><!-- #nav-menu-container -->
+  </div>
+</header><!-- #header -->

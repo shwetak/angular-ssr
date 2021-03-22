@@ -1,0 +1,191 @@
+<app-header></app-header>
+<!--=============banner========-->
+<section class="services_sec" style="background: url(assets/images/service-banner1.jpg);" *ngIf="this.serviceData">
+  <div class="services_overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div innerHtml="{{serviceData.bannerContent}}"></div>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <h3 class="text-white">Select State</h3>
+          </div>
+
+          <div class="col-md-4 col-6">
+            <select id="inputState" class="bg-light form-control form-control-lg custom_form">
+              <option selected>Select State</option>
+              <option value="alaska">Alaska</option>
+              <option value="alabama">Alabama</option>
+              <option value="arizona">Arizona</option>
+              <option value="arkansas">Arkansas</option>
+              <option value="california">California</option>
+              <option value="colorado">Colorado</option>
+              <option value="connecticut">Connecticut</option>
+              <option value="delaware">Delaware</option>
+              <option value="florida">Florida</option>
+              <option value="georgia">Georgia</option>
+              <option value="hawaii">Hawaii</option>
+              <option value="idaho">Idaho</option>
+              <option value="illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="kansas">Kansas</option>
+              <option value="kentucky">Kentucky</option>
+              <option value="louisiana">Louisiana</option>
+              <option value="maine">Maine</option>
+              <option value="maryland">Maryland</option>
+              <option value="massachusetts">Massachusetts</option>
+              <option value="michigan">Michigan</option>
+              <option value="minnesota">Minnesota</option>
+              <option value="mississippi">Mississippi</option>
+              <option value="missouri">Missouri</option>
+              <option value="montana">Montana</option>
+              <option value="nebraska">Nebraska</option>
+              <option value="nevada">Nevada</option>
+              <option value="new hampshire">New Hampshire</option>
+              <option value="new jerseyArizona">New JerseyArizona</option>
+              <option value="new mexico">New Mexico</option>
+              <option value="new york">New York</option>
+              <option value="new jerseyArizona">New JerseyArizona</option>
+              <option value="north carolina">North Carolina</option>
+              <option value="north dakota">North Dakota</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="oregon">Oregon</option>
+              <option value="pennsylvania">Pennsylvania</option>
+              <option value="rhode island">Rhode Island</option>
+              <option value="south carolina">South Carolina</option>
+              <option value="south dakota ">South Dakota </option>
+              <option value="tennessee">Tennessee</option>
+              <option value="texas">Texas</option>
+              <option value="utah"> Utah</option>
+              <option value="vermont"> Vermont</option>
+              <option value="virginia"> Virginia</option>
+              <option value="washington"> Washington</option>
+              <option value="west virginia"> West Virginia</option>
+              <option value="wisconsin"> Wisconsin</option>
+              <option value="wyoming"> Wyoming</option>
+            </select>
+
+            <!-- <select class="form-control form-control-lg">
+              <option>Select Location</option>
+              <option>Text Here</option>
+              <option>Text Here</option>
+              <option>Text Here</option>
+            </select> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <h3 class="services-title text-right text-white mb-4">Start the road to recovery</h3>
+        <div class="input-group input-group-lg mb-3">
+          <input type="text" class="form-control" placeholder="">
+          <div class="input-group-append">
+            <button class="input-group-text call_btn">Get a Call</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary btn_bdr btn-lg btn-block"><img src="assets/images/locator.svg"
+            class="animated infinite flash">Treatment Center Locator</button>
+      </div>
+    </div>
+    <!--/row-->
+  </div>
+  <!--/container-->
+</section><!-- banner_section -->
+
+
+
+
+<section class="services_wrap" *ngIf="this.serviceData">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card text-white bg_color2 mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Get started on the road to recovery</h3>
+            <div class="text-center"><a href="#" class="find-out-now">Find Out Now</a></div>
+          </div>
+        </div>
+
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <div innerHtml="{{serviceData.questionContent}}"></div>
+            <h2 class="phone_num animated infinite pulse"><i class="fa fa-volume-control-phone text_org"></i>
+              {{serviceData.tollFreeNo}}</h2>
+          </div>
+        </div>
+
+        <div class="card border_org mb-3" *ngIf="serviceData.faqs.length!=0">
+          <div class="card-body text-dark text-center">
+            <h4 class="card-title mb-4">Frequently Asked Questions</h4>
+            <ul class="f_a_q" *ngFor='let faq of serviceData.faqs;let k = index'>
+              <li>
+                <a data-toggle="collapse" href="{{'#FAQ' + k}}" role="button" aria-expanded="false"
+                  aria-controls="collapseExample">
+                  {{faq.question}}
+                </a>
+              </li>
+              <div class="collapse" id="{{'FAQ' + k}}">
+                <div class="card card-body" innerHtml="{{faq.answer}}"></div>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card text-white bg_color2 mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Add or feature your center</h3>
+            <div class="text-center"><a href="#" class="find-out-now">Submit your center</a></div>
+          </div>
+        </div>
+
+        <div class="card border-secondary mb-3">
+          <div class="card-header text-center text-white bg_color2">Find a Heading Text Here </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.4081956294144!2d77.33412306455996!3d28.647493990155525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb37d5f876ff%3A0x1da77a292503ffa0!2sAnsal%20Plaza!5e0!3m2!1sen!2sin!4v1582958580831!5m2!1sen!2sin"
+            width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <div class="card-body text-secondary">
+            <h5 class="card-title">Secondary card title</h5>
+            <p class="text_gray text-justify">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+            <a href="#" class="find_loc">Find text here</a>
+          </div>
+        </div>
+      </div>
+      <!--/col-12 col-md-4-->
+
+
+      <div class="col-12 col-md-8">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="heading-h2">{{serviceData.mainTitle}}</h2>
+          </div>
+          <div class="col-md-12">
+            <p class="text-justify">
+              <img src="{{serviceImage}}" alt="{{serviceData.name + ' image'}}" class="serve_image">
+              {{serviceData.description}}
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+          <div class="col-md-12" innerHtml="{{serviceData.content}}"></div>
+          <div class="col-md-12" *ngIf="serviceStates.length!=0">
+            <h2 class="heading-h2">Featurd States</h2>
+            <ul class="f_a_q">
+              <li *ngFor='let state of serviceStates;let l = index'>
+                <a routerLink="{{'/' + serviceData.permalink + '/' + state.permalink}}">
+                  {{state.name}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--/row-->
+      </div>
+      <!--/col-12 col-md-8-->
+
+    </div>
+    <!--/row-->
+  </div>
+</section><!-- services_wrap -->
+<app-footer></app-footer>

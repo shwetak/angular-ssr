@@ -1,0 +1,160 @@
+<app-header></app-header>
+<!--=============banner========-->
+<section class="services_sec" style="background: url(assets/images/service-banner1.jpg);">
+    <div class="services_overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <h1 class="services-title text-white animated bounceInLeft delay-1s"><b>{{serviceData.serviceName}} in {{serviceData.name}}</b></h1>
+          <p class="text-white" [innerHtml]="serviceData.content"></p>
+
+        </div>
+        <div class="col-12 col-md-4">
+            <h3 class="services-title text-right text-white mb-4">Start the road to recovery</h3>
+            <div class="input-group input-group-lg mb-3">
+              <input type="text" class="form-control" placeholder="">
+              <div class="input-group-append">
+                <button class="input-group-text call_btn">Get a Call</button>
+              </div>
+            </div>
+        </div>
+      </div><!--/row-->
+    </div><!--/container-->
+</section><!-- banner_section -->
+
+<section class="state_wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <!-- <h2 class="heading-h2">State</h2> -->
+                <ul class="state_list">
+                    <li *ngFor='let faq of serviceData.faqs;let k = index'>
+                        <div class="media">
+                            <img src="assets/images/service_img1.jpg" class="mr-3 state_img" alt="State Name">
+                            <div class="media-body">
+                                <h6 class="mt-0 mb-1"><strong>{{faq.question}}</strong></h6>
+                                <p class="state_content" [innerHtml]="faq.answer"><a href="#">Read more</a> </p>
+                            </div>
+                        </div>
+                    </li>                  
+                </ul>
+            </div><!--/col-12 col-md-4-->
+            <!-- <div class="col-12 col-md-8">
+                <h2 class="heading-h2">Graph Title</h2>
+                <img src="assets/images/graph.jpg" style="width: 100%;">
+                <div id="chartContainer" style="width: 100%; height: 400px;"></div>
+                <div id="chartContainer1" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
+            </div> -->
+        </div><!--/row-->
+    </div>
+</section><!-- state_wrap -->
+
+<!-- <section class="testimonial_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="heading-h2">Our Happy Customer</h2>
+            </div>
+            <div class="col-md-12">
+                <div id="owl-demo2">
+                    <owl-carousel-o [options]="customOptions">
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <div class="col-md-12">
+                                    <div class="testimonial_box">
+                                        <i class="fa fa-quote-left quote_l"></i>
+                                        <h4 class="text-center mb-4">Text Here</h4>
+                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="testimonial_footer">
+                                            <p class="mb-0">Text Here</p>
+                                            <p><strong>Lorem ipsum dolor sit amet</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <div class="col-md-12">
+                                    <div class="testimonial_box">
+                                        <i class="fa fa-quote-left quote_l"></i>
+                                        <h4 class="text-center mb-4">Text Here</h4>
+                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="testimonial_footer">
+                                            <p class="mb-0">Text Here</p>
+                                            <p><strong>Lorem ipsum dolor sit amet</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <div class="col-md-12">
+                                    <div class="testimonial_box">
+                                        <i class="fa fa-quote-left quote_l"></i>
+                                        <h4 class="text-center mb-4">Text Here</h4>
+                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="testimonial_footer">
+                                            <p class="mb-0">Text Here</p>
+                                            <p><strong>Lorem ipsum dolor sit amet</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <div class="col-md-12">
+                                    <div class="testimonial_box">
+                                        <i class="fa fa-quote-left quote_l"></i>
+                                        <h4 class="text-center mb-4">Text Here</h4>
+                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="testimonial_footer">
+                                            <p class="mb-0">Text Here</p>
+                                            <p><strong>Lorem ipsum dolor sit amet</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <div class="col-md-12">
+                                    <div class="testimonial_box">
+                                        <i class="fa fa-quote-left quote_l"></i>
+                                        <h4 class="text-center mb-4">Text Here</h4>
+                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="testimonial_footer">
+                                            <p class="mb-0">Text Here</p>
+                                            <p><strong>Lorem ipsum dolor sit amet</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="bolg_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12 text-center">
+                    <h2 class="heading-h2">Blog</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<app-footer></app-footer>

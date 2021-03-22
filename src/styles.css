@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: #fff;
+    color: #3c4858;
+    font-family: "Open Sans", sans-serif;
+  }
+  .t-color{
+    color: #f7941e;
+  }
+  a{
+    color: #f7941e;
+  }
+  a:hover{
+    color: #f7941e;
+  }
+  
